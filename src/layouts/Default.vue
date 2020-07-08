@@ -1,12 +1,13 @@
 <template>
   <div class="layout">
     <header class="header">
+      <g-image alt="Example image" src="~/blog-logo.png" width="135" />
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
+        <g-link class="nav__link" to="/about/">自己紹介</g-link>
       </nav>
     </header>
     <slot/>

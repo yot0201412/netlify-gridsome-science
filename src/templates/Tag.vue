@@ -1,11 +1,13 @@
 <template>
   <Layout>
-    <div class="info">
-      <p> {{ $page.tag.title }} </p>
+    <div  class="bg-white m-1 p-3">
+      <div>
+        <h2 class="text-3xl mb-2 text-left p-3 border-b"><strong>{{ $page.tag.title }}</strong>の関連記事</h2>
+      </div>
+      <g-link v-for="post in $page.tag.belongsTo.edges" :key="post.id" :to="post.node.path">
+        <h2> {{ post.node.title }}</h2>
+      </g-link>
     </div>
-    <g-link v-for="post in $page.tag.belongsTo.edges" :key="post.id" :to="post.node.path">
-      <h2> {{ post.node.title }}</h2>
-    </g-link>
    </Layout>
 </template>
 

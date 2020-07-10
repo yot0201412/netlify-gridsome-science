@@ -1,24 +1,16 @@
 <template>
   <Layout>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-
-    <h1>Hello, world!</h1>
-    <div>
-    <g-link v-for="post in $page.posts.edges" :key="post.id" :to="post.node.path">
-      <p> {{ post.node.title }}</p>
-    </g-link>
+    <div class="bg-white m-2  p-3">
+      <p  class="text-center text-mx">
+        好きな科学の面白さ、生活に役立つ情報を発信したくて始めました。<br>
+        科学全般気になったものを取り上げて記事にしていきます。<br>
+        取り上げて欲しい話題がありましたら、Twitterに連絡ください！
+      </p>
+      <p class="text-3xl lg:text-xl font-semibold  border-b  p-3 pb-1">記事一覧</p>
+      <g-link v-for="post in $page.posts.edges" :key="post.id" :to="post.node.path">
+        <p> {{ post.node.title }} {{post.node.discription}}</p>
+      </g-link>
     </div>
-    <p>
-      好きな科学の面白さ、知ってると役立つ情報を発信していきたい。<br>
-      科学全般気になったものを取り上げて記事にしていきます。<br>
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
   </Layout>
 </template>
 
@@ -37,6 +29,7 @@ export default {
           id
           title
           path
+          discription
         }
       }
     }

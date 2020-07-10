@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "@gridsome/vue-remark": "^0.2.2",
-    "gridsome": "^0.7.0"
+    "gridsome": "^0.7.0",
+    "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
-    "@vue/composition-api": "^1.0.0-beta.2"
+    "@vue/composition-api": "^1.0.0-beta.2",
+    "gridsome-plugin-tailwindcss": "^3.0.1"
   }
 }

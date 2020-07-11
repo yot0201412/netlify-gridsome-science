@@ -8,16 +8,26 @@
       </p>
       <p class="text-3xl lg:text-xl font-semibold  border-b  p-3 pb-1">記事一覧</p>
       <g-link v-for="post in $page.posts.edges" :key="post.id" :to="post.node.path">
-        <p> {{ post.node.title }} {{post.node.discription}}</p>
+        <div class="m-8 border-t p-2">
+          <p class="text-xl"> {{ post.node.date | date_fomatter }} <strong> {{ post.node.title }}</strong><p>
+          <p> {{post.node.discription}}</p>
+        </div>
       </g-link>
     </div>
   </Layout>
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
   metaInfo: {
     title: 'Home'
+  },
+  filters: {
+    date_fomatter(date){
+      return moment(date).format('YYYY/MM/DD');
+    }
   }
 }
 </script>
@@ -28,6 +38,7 @@ export default {
         node {
           id
           title
+          date
           path
           discription
         }

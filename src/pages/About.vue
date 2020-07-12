@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div>
-      <h1 class="font-semibold text-3xl mb-2 text-left p-3 border-b">自己紹介</h1>
+      <h1 class="font-semibold text-3xl mb-2 text-left p-3 border-b">ABOUT ME</h1>
       <p class="mb-2">システムエンジニア　薬学部出身<br/>
       学生時代の専攻はウイルス学。<br/>
       好きな食べ物はビーフシチューとパイナップル。<br>

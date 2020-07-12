@@ -1,15 +1,28 @@
 <template>
   <div>
-    <div class="m-2 bg-white p-3">
-      <p class="m-1 border-b">最新の記事</p>
-      <span v-for="post in $static.posts.edges" :key="post.id" class='inline-block bg-gray-200 rounded-full px-3 py-1 text-base font-semibold text-gray-700 m-1'>
-        <g-link :key="post.id" :to="post.node.path">
-          <p> {{ post.node.title }}</p>
+    <div class="m-2 bg-white p-2">
+      <p class="m-2 pt-2 border-t font-semibold"><g-image alt="tag" src="~/post_icon.png" class="m-0 mr-1 float-left"/>最新の記事</p>
+      <div v-for="post in $static.posts.edges" :key="post.id" class="px-1 pb-2">
+        <g-link :to="post.node.path" class="m-1 pt-0 pb-3 text-left hover:text-indigo-600 text-base">
+          {{ post.node.date | date_fomatter }}<br>
+          {{ post.node.title }}
         </g-link>
-      </span>
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+import moment from 'moment';
+
+export default {
+  filters: {
+    date_fomatter(date){
+      return moment(date).format('YYYY/MM/DD');
+    }
+  }
+}
+</script>
 
 <static-query>
 query {
@@ -19,6 +32,7 @@ query {
         id
         title
         path
+        date
       }
     }
   }

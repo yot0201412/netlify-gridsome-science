@@ -9,6 +9,7 @@
           <nav class="lg:flex lg:items-center lg:justify-between xl:w-1/5 px-6">
             <g-link class="m-5 hover:text-indigo-600" to="/">Home</g-link>
             <g-link class="m-5 hover:text-indigo-600" to="/about/">ABOUT ME</g-link>
+            <g-link to="https://twitter.com/yoo_medeng" ><g-image alt="twitter" src="~/twitter_icon.png" width="30"/></g-link>
           </nav>
       </header>
       <div class="flex mt-16">

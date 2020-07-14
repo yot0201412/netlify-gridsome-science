@@ -12,8 +12,10 @@ module.exports = {
         'h1': { fontSize: config('theme.fontSize.2xl') },
         'h2': { fontSize: config('theme.fontSize.xl') },
         'h3': { fontSize: config('theme.fontSize.lg') },
-        'p' : { 'line-height': '2.5rem'},
+        'p' : { 'line-height': '2.25rem'},
+        // 'p' : { 'lg:line-height': '5rem'},
         'ol': {'list-style-type': 'decimal'}
+
       })
     })
   ],

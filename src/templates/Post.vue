@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <article>
-      <div class="bg-white m-2 p-5">
+      <div class="m-2 p-5 text-sm lg:text-base xl:text-base">
         <p class="p-1">{{ $page.post.date | date_fomatter }}</p>
         <h1 class="font-semibold text-2xl mb-2 text-left p-1">{{ $page.post.title }}</h1>
         <div class="px-2 pt-0 pb-3 text-left">

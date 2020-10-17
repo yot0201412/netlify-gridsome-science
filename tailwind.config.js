@@ -14,8 +14,10 @@ module.exports = {
         'h3': { fontSize: config('theme.fontSize.lg') },
         'p' : { 'line-height': '2.25rem'},
         // 'p' : { 'lg:line-height': '5rem'},
-        'ol': {'list-style-type': 'decimal'}
-
+        'ol': {'list-style-type': 'decimal'},
+        'table': { 'border': 'solid 1px lightgray', 'margin': '1em' },
+        'th': { 'border': 'solid 1px lightgray', 'padding' : '0.25em' },
+        'td': { 'border': 'solid 1px lightgray', 'padding' : '0.25em' }
       })
     })
   ],

@@ -41,8 +41,3 @@ query {
   }
 }
 </static-query>
-
-<style>
-body {
-}
-</style>

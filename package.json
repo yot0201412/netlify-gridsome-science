@@ -10,7 +10,7 @@
     "@gridsome/plugin-google-analytics": "^0.1.1",
     "@gridsome/vue-remark": "^0.2.2",
     "gridsome": "^0.7.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
